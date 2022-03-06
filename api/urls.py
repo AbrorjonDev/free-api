@@ -6,8 +6,8 @@ from .views import StudentViewSet,StudentInfosViewSet
 
 router = DefaultRouter()
 
-router.register(r'students', StudentViewSet)
-router.register(r'students-infos', StudentInfosViewSet)
+router.register(r'students', StudentViewSet, basename="students-api")
+router.register(r'students-infos', StudentInfosViewSet, basename="students-secured-api")
 
 
 urlpatterns = [
